@@ -3,7 +3,6 @@ from pathlib import Path
 import asyncio, time, io, math, os, logging, asyncio, shutil, re, subprocess, json
 from re import findall
 from asyncio import sleep
-from GabiBraunRobot import kp as app 
 from telethon.events import NewMessage
 from telethon.tl.custom import Dialog
 from datetime import datetime as dt
@@ -280,7 +279,6 @@ async def download_video(v_url):
 
 __help__ = """
  ➩ /song <songname artist(optional)>: uploads the song in it's best quality available
-
  ➩ /video <songname artist(optional)>: uploads the video song in it's best quality available
 """
 
