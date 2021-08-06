@@ -53,7 +53,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hey There!` [👩‍💼](https://telegra.ph/file/0ed48df18f4175d61b5d8.jpg) `My name is` *Gabi Braun*
+`Hey There!` [👩‍💼](https://telegra.ph/file/0ed48df18f4175d61b5d8.jpg) `My name is` *Pikachu Robo*
 `I am an Anime Themed group management bot.
 Build by The Ghost Hunter and managed by Falco Grice for Your Telegram Group , I specialize in managing anime and similar themed groups.
 You can find my list of available commands with! Hit` *🔐Commands*   
@@ -62,7 +62,7 @@ You can find my list of available commands with! Hit` *🔐Commands*
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD GABI TO YOUR GROUP ➕️",url="t.me/Gabi_Braun_Robot?startgroup=true"),
+            text="➕️ ADD GABI TO YOUR GROUP ➕️",url="t.me/PikachuRobo_bot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
@@ -70,21 +70,21 @@ buttons = [
      
     ],
     [     InlineKeyboardButton(
-            text="🎦 H.S.A Group", url="https://telegram.dog/Hindisubsanimes"),
+            text="Fedration logs", url="https://.me/pikachu_fed_log"),
     
     ],
     [
         InlineKeyboardButton(
-            text="📮 Update Channel", url="https://telegram.dog/EldianGabi_UpdateChannel"),
+            text="📮 Update Channel", url="https://t.me/PikachuUpdate"),
     ],
     [
         InlineKeyboardButton(
-            text="📑 Loges", url="https://t.me/Gabi_Support_Log"),
+            text="📑 Loges", url="https://t.me/"),
           
 
 
 InlineKeyboardButton(
-            text="🐱 SUPPORT", url="https://telegram.dog/GabiHelpSupport"
+            text="🐱 SUPPORT", url="https://telegram.dog/PikachuGbanSupport"
         ),
 
     ],
@@ -97,11 +97,11 @@ InlineKeyboardButton(
 
 
 HELP_STRINGS = """
-`Hey there! My name is` [Gabi Braun]("https://telegra.ph/file/8cab4bb122cf76702b06d.jpg") 
+`Hey there! My name is` [Pikachu Robo]("https://telegra.ph/file/8cab4bb122cf76702b06d.jpg") 
 I'm a Eldian and help admins manage their groups with Some Powerful Titans! `Have a look at the following for an idea of some of the things I can help you with.`"""
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project via [Paytm](#) or by contacting @The_Ghost_Hunter\
+ You can support the project via [Paytm](#) or by contacting @PikachuRobo_bot\
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -116,7 +116,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("GabiBraunRobot.modules." + module_name)
+    imported_module = importlib.import_module("PikachuRobo.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
