@@ -53,7 +53,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Pika Pika!` [👩‍💼](https://telegra.ph/file/0ed48df18f4175d61b5d8.jpg) `My name is` *Gabi Braun*
+`Pika Pika!` [👩‍💼](https://telegra.ph/file/0d79e4dd2abdf6779ce16.jpg) `My name is` *PikaChu*
 `I am an Anime Themed group management bot.
 Build by The Ghost Hunter and managed by RYUK for Your Telegram Group , I specialize in managing anime and similar themed groups.
 You can find my list of available commands with! Hit` *🔐Commands*   
@@ -62,7 +62,7 @@ You can find my list of available commands with! Hit` *🔐Commands*
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD ME TO YOUR GROUP ➕️",url="t.me/Gabi_Braun_Robot?startgroup=true"),
+            text="➕️ ADD ME TO YOUR GROUP ➕️",url="t.me/PikachuRobo_bot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
@@ -97,7 +97,7 @@ InlineKeyboardButton(
 
 
 HELP_STRINGS = """
-`Hey there! I,m` [PikaChu]("https://telegra.ph/file/8cab4bb122cf76702b06d.jpg") 
+`Hey there! I,m a` [PikaChu]("https://telegra.ph/file/8cab4bb122cf76702b06d.jpg") 
 I'm a Pokemon and help admins manage their groups with My master! `Have a look at the following for an idea of some of the things I can help you with.`"""
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
