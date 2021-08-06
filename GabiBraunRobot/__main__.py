@@ -62,7 +62,7 @@ You can find my list of available commands with! Hit` *🔐Commands*
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD GABI TO YOUR GROUP ➕️",url="t.me/PikachuRobo_bot?startgroup=true"),
+            text="➕️ ADD ME TO YOUR GROUP ➕️",url="t.me/PikachuRobo_bot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(
@@ -116,7 +116,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("PikachuRobo.modules." + module_name)
+    imported_module = importlib.import_module("GabiBraunRobot.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
