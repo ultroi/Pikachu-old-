@@ -70,7 +70,7 @@ buttons = [
      
     ],
     [     InlineKeyboardButton(
-            text="🎦 My Group", url="https://telegram.dog/Rising_Anime_Community"),
+            text="🎦 My Group", url="https://telegram.dog/animeclub_4all"),
     
     ],
     [
