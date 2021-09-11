@@ -1,5 +1,5 @@
-mod_name = "VC Music"
-help = """
+__mod_name__ = "VC Music"
+__help__ = """
           》PIKACHU VC PLAYER《
             
 I can now also play music in your group's voice chat
