@@ -33,5 +33,5 @@ __command_list__ = [
     "animequotes"
 ]
 __handlers__ = [
-    AQ_HANDLER
+    ANIMEQUOTES_HANDLER
 ]
