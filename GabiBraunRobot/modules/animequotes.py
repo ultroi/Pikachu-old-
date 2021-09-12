@@ -24,7 +24,7 @@ __help__ = """
  • `/aq`*:* gives random anime quotes
  
 """
-ANIMEQUOTES_HANDLER = DisableAbleCommandHandler("aq", animequotes)
+ANIMEQUOTES_HANDLER = DisableAbleCommandHandler("animequotes", animequotes)
 
 dispatcher.add_handler(AQ_HANDLER)
 
