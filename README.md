@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=" https://telegra.ph/file/6918fd8d38adc15454ccc.jpg">
+  <img src="https://telegra.ph/file/6918fd8d38adc15454ccc.jpg">
 </p>
 
 ## Gabi Braun Robot 
