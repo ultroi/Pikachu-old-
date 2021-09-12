@@ -451,7 +451,10 @@ def dva(update, context):
         return
     msg.reply_photo(url)
 
-
+ADD_NSFW_HANDLER = CommandHandler("addnsfw", add_nsfw)
+REMOVE_NSFW_HANDLER = CommandHandler("rmnsfw", rem_nsfw)
+LIST_NSFW_CHATS_HANDLER = CommandHandler(
+    "nsfwchats", list_nsfw_chats, filters=CustomFilters.dev_filter)
 LEWDKEMO_HANDLER = CommandHandler("lewdkemo", lewdkemo)
 NEKO_HANDLER = CommandHandler("neko", neko)
 FEET_HANDLER = CommandHandler("feet", feet)
@@ -505,6 +508,9 @@ SMUG_HANDLER = CommandHandler("smug", smug)
 BAKA_HANDLER = CommandHandler("baka", baka)
 DVA_HANDLER = CommandHandler("dva", dva)
 
+dispatcher.add_handler(ADD_NSFW_HANDLER)
+dispatcher.add_handler(REMOVE_NSFW_HANDLER)
+dispatcher.add_handler(LIST_NSFW_CHATS_HANDLER)
 dispatcher.add_handler(LEWDKEMO_HANDLER)
 dispatcher.add_handler(NEKO_HANDLER)
 dispatcher.add_handler(FEET_HANDLER)
@@ -559,6 +565,9 @@ dispatcher.add_handler(BAKA_HANDLER)
 dispatcher.add_handler(DVA_HANDLER)
  
 __handlers__ = [
+    ADD_NSFW_HANDLER,
+    REMOVE_NSFW_HANDLER,
+    LIST_NSFW_CHATS_HANDLER,
     NEKO_HANDLER,
     FEET_HANDLER,
     YURI_HANDLER,
