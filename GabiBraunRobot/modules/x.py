@@ -605,5 +605,5 @@ __handlers__ = [
     ERO_HANDLER,
     SMUG_HANDLER,
     BAKA_HANDLER,
-    DVA_HANDLER, 
-               ]
+    DVA_HANDLER,
+    ]
