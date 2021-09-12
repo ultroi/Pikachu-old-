@@ -102,7 +102,7 @@ def wallpaper(update, context):
 
 @run_async
 def lewdk(update, context):
-   msg = update.effective_message
+    msg = update.effective_message
     target = "lewdk"
     msg.reply_photo(nekos.img(target))
 
@@ -129,8 +129,8 @@ def lewd(update, context):
 @run_async
 def feed(update, context):
    msg = update.effective_message
-    target = "feed"
-    msg.reply_video(nekos.img(target))
+   target = "feed"
+   msg.reply_video(nekos.img(target))
 
 
 @run_async
