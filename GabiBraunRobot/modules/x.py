@@ -257,16 +257,7 @@ def holo(update, context):
     target = "holo"
     msg.reply_photo(nekos.img(target))
 
-@run_async
-def keta(update, context):
-    msg = update.effective_message
-    target = 'keta'
-    if not target:
-         msg.reply_text("No URL was received from the API!")
-         return
-     msg.reply_photo(nekos.img(target))
-
-
+ 
 @run_async
 def pussygif(update, context):
     msg = update.effective_message
