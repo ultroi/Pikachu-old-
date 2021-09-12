@@ -6,6 +6,7 @@ import html
 from telegram import Message, Chat, Update, Bot, MessageEntity
 from telegram import ParseMode
 from telegram.ext import CommandHandler, run_async
+from GabiBrunRobot.modules.helper_funcs.chat_status import user_admin
 
 from GabiBraunRobot import dispatcher, updater
 
