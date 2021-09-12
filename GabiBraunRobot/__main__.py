@@ -84,7 +84,7 @@ buttons = [
             text="📑 Logs", url="https://t.me/PiKa_HaMMer_LoGs"),
      
     ],
-    [,
+    [
 
 
 InlineKeyboardButton(
