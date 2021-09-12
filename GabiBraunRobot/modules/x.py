@@ -78,7 +78,7 @@ def feetgif(update, context):
 def cumgif(update, context):
     msg = update.effective_message
     target = "cum"
-   msg.reply_video(nekos.img(target))
+    msg.reply_video(nekos.img(target))
 
 @run_async
 def erokemo(update, context):
