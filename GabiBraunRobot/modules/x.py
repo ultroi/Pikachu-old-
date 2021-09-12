@@ -176,7 +176,7 @@ def nekonsfw(update, context):
 
 @run_async
 def solo(update, context):
-   msg = update.effective_message
+    msg = update.effective_message
     target = "solo"
     msg.reply_photo(nekos.img(target))
 
@@ -347,7 +347,7 @@ def hug(update, context):
 
 @run_async
 def erok(update, context):
-   msg = update.effective_message
+    msg = update.effective_message
     target = "erok"#    msg.reply_photo(nekos.img(target))
 
 
@@ -398,7 +398,7 @@ def dva(update, context):
     msg.reply_photo(url)
 
 
-#LEWDKEMO_HANDLER = CommandHandler("lewdkemo", lewdkemo)
+LEWDKEMO_HANDLER = CommandHandler("lewdkemo", lewdkemo)
 NEKO_HANDLER = CommandHandler("neko", neko)
 FEET_HANDLER = CommandHandler("feet", feet)
 YURI_HANDLER = CommandHandler("yuri", yuri)
