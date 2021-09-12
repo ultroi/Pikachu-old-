@@ -7,13 +7,13 @@ from telegram import Message, Chat, Update, Bot, MessageEntity
 from telegram import ParseMode
 from telegram.ext import CommandHandler, run_async
 from GabiBraunRobot.modules.helper_funcs.chat_status import user_admin
-from GabibraunRobot import dispatcher, updater
-import GabibraunRobot.modules.sql.nsfw_sql as sql
-from GabibraunRobot.modules.log_channel import gloggable
+from GabiBraunRobot import dispatcher, updater
+import GabiBraunRobot.modules.sql.nsfw_sql as sql
+from GabiBraunRobot.modules.log_channel import gloggable
 from telegram import Message, Chat, Update, Bot, MessageEntity
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import CommandHandler, run_async, CallbackContext
-from GabibraunRobot.modules.helper_funcs.filters import CustomFilters
+from GabiBraunRobot.modules.helper_funcs.filters import CustomFilters
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
 @run_async
