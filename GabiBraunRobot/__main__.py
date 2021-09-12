@@ -53,10 +53,10 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Pika Pika!` [👩‍💼](https://telegra.ph/file/0d79e4dd2abdf6779ce16.jpg) `My name is` *PikaChu*
-`I am an Anime Themed group management bot.
+Pika Pika! [👩‍💼](https://telegra.ph/file/0d79e4dd2abdf6779ce16.jpg) My name is *PikaChu*
+I am an Anime Themed group management bot.
 Build by [RYUK](tg://openmessage?user_id=1281033576) and managed by [Tamim](tg://openmessage?user_id=1157847739) for Your Telegram Group , I specialize in managing anime and similar themed groups.
-You can find my list of available commands with! Hit` *🔐Commands*   
+You can find my list of available commands with! Hit *🔐Commands*   
 """
 
 buttons = [
