@@ -62,29 +62,33 @@ You can find my list of available commands with! Hit` *🔐Commands*
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ ADD ME TO YOUR GROUP ➕️",url="t.me/PikachuRobo_bot?startgroup=true"),
-    ],
-    [
+            text="➕️ ADD ME",url="t.me/PikachuRobo_bot?startgroup=true"),
+  
         InlineKeyboardButton(
-              text="🔐 Command & Help", callback_data="help_back"),
+              text="✨ Help", callback_data="help_back"),
      
     ],
-    [     InlineKeyboardButton(
-            text="🎦 My Group", url="https://telegram.dog/animeclub_4all"),
-    
+    [  
+        InlineKeyboardButton(
+              text="🎦 Anime Group", url="https://telegram.dog/animeclub_4all"),
+         
+        InlineKeyboardButton(
+              text="🎦 Anime Channel", url="https://t.me/Anime_Publish"),
+ 
     ],
     [
         InlineKeyboardButton(
-            text="📮 Update Channel", url="https://telegram.dog/PikachuUpdate"),
-    ],
-    [
+            text="📮 Updates", url="https://telegram.dog/PikachuUpdate"),
+
         InlineKeyboardButton(
-            text="📑 Loges", url="https://t.me/PiKa_HaMMer_LoGs"),
-          
+            text="📑 Logs", url="https://t.me/PiKa_HaMMer_LoGs"),
+     
+    ],
+    [,
 
 
 InlineKeyboardButton(
-            text="🐱 SUPPORT", url="https://telegram.dog/PikachuHelpSupport"
+            text="💫 SUPPORT 💫", url="https://telegram.dog/PikachuHelpSupport"
         ),
 
     ],
