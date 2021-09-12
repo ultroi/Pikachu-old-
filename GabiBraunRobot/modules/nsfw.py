@@ -6,29 +6,29 @@ import html
 from telegram import Message, Chat, Update, Bot, MessageEntity
 from telegram import ParseMode
 from telegram.ext import CommandHandler, run_async
-from GabiBrunRobot.modules.helper_funcs.chat_status import user_admin
-
-from GabiBraunRobot import dispatcher, updater
+from GabiBraunRobot.modules.helper_funcs.chat_status import user_admin
 
 
 
-import os
 
-import html
 
-import nekos
 
-import requests
 
-from PIL import Image
 
-from telegram import ParseMode
+
+
+
+
+
+
+
+
 
 from KURUMIBOT import dispatcher, updater
 
 import KURUMIBOT.modules.sql.nsfw_sql as sql
 
-from KURUMIBOT.modules.log_channel import gloggable
+from K.modules.log_channel import gloggable
 
 from telegram import Message, Chat, Update, Bot, MessageEntity
 
@@ -36,9 +36,9 @@ from telegram.error import BadRequest, RetryAfter, Unauthorized
 
 from telegram.ext import CommandHandler, run_async, CallbackContext
 
-from KURUMIBOT.modules.helper_funcs.filters import CustomFilters
+from GabibrunRobot.modules.helper_funcs.filters import CustomFilters
 
-from KURUMIBOT.modules.helper_funcs.chat_status import user_admin
+
 
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
