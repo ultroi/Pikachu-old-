@@ -88,11 +88,6 @@ InlineKeyboardButton(
         ),
 
     ],
-    [
-        InlineKeyboardButton(
-                    text="🗄️ Source Code", url="https://github.com/Falco-Grice/GabiBraunRobot"
-        ),
-    ],
 ]
 
 
