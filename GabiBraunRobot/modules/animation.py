@@ -351,6 +351,16 @@ __help__ = """
 - /love ❣️
 - /hack 👨‍💻
 - /bombs 💣
+  
+  STYLE TEXT :- 
+- /weebify <text>: weebify your text!
+- /bubble <text>: bubble your text!
+- /fbubble <text>: bubble filled  your text!
+- /square <text>: square your text!
+- /fsquare <text>: square filled your text!
+- /latin <text>: latinfy your text!
+- /blue <text>: blueify your text!
+- /lined <text>: lined your text!
 """
 KILL_HANDLER = DisableAbleCommandHandler("kill",kill)
 LOVE_HANDLER = DisableAbleCommandHandler("love", love)
