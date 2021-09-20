@@ -464,6 +464,7 @@ __help__ = """
  • `/demote`*:* demotes the user replied to
  • `/title <title here>`*:* sets a custom title for an admin that the bot promoted
  • `/admincache`*:* force refresh the admins list
+ • `/fullpromote`*:* promotes the user replied to with full rights
 """
 
 ADMINLIST_HANDLER = DisableAbleCommandHandler("admins", adminlist)
