@@ -100,7 +100,7 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
 
     return log_message
     
-    FULLPROMOTE_HANDLER = DisableAbleCommandHandler("fullpromote", fullpromote, run_async=True)
+FULLPROMOTE_HANDLER = DisableAbleCommandHandler("fullpromote", fullpromote, run_async=True)
 dispatcher.add_handler(FULLPROMOTE_HANDLER)
 __handlers__ = [
   FULLPROMOTE_HANDLER, 
