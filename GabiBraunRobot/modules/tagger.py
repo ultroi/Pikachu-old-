@@ -3,12 +3,12 @@ import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from  GabiBraunRobot import telethn 
+from GabiBraunRobot import telethn 
 from GabiBraunRobot.events import register as GabiBraunRobot
 
 
 
-@cutiepii(pattern="^/tagall ?(.*)")
+@GabiBraunRobot(pattern="^/tagall ?(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -20,7 +20,7 @@ async def _(event):
     await event.delete()
 
 
-@cutiepii(pattern="^/users ?(.*)")
+@GabiBraunRobot(pattern="^/users ?(.*)")
 async def _(event):
     if event.fwd_from:
         return
