@@ -37,7 +37,4 @@ async def _(event):
     await event.delete()
 
 
-__mod_name__ = "Tagall"
-__help__ = """
-  ➢ `/tagall : Tag everyone in a chat
-"""
+
