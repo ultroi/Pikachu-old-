@@ -46,3 +46,4 @@ tgcrypto
 hachoir
 configparser
 cloudscraper
+telegraph
