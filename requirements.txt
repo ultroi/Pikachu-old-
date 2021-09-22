@@ -47,3 +47,5 @@ hachoir
 configparser
 cloudscraper
 telegraph
+selenium 
+cowpy
