@@ -23,7 +23,7 @@ from zalgo_text import zalgo
 
 
 from GabiBraunRobot.events import register
-from GabiBraunRobot import telethn, pbot, TEMP_DOWNLOAD_DIRECTORY
+from GabiBraunRobot import telethn, pgram, TEMP_DOWNLOAD_DIRECTORY
 
 nltk.download("punkt")
 nltk.download("averaged_perceptron_tagger")
