@@ -22,8 +22,8 @@ from telethon.tl import functions
 from zalgo_text import zalgo
 
 
-from PikachuRobo_bot.events import register
-from PikachuRobo_bot import telethn, ubot, TEMP_DOWNLOAD_DIRECTORY
+from GabiBarunRobot.events import register
+from GabiBraunRobot import telethn, ubot, TEMP_DOWNLOAD_DIRECTORY
 
 nltk.download("punkt")
 nltk.download("averaged_perceptron_tagger")
