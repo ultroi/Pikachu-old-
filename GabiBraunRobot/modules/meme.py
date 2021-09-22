@@ -22,7 +22,7 @@ from telethon.tl import functions
 from zalgo_text import zalgo
 
 
-from GabiBarunRobot.events import register
+from GabiBraunRobot.events import register
 from GabiBraunRobot import telethn, ubot, TEMP_DOWNLOAD_DIRECTORY
 
 nltk.download("punkt")
