@@ -60,6 +60,9 @@ DEPLOY MUSIC BOT -
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sadew451/NatsukiMusic)
  
 Deploy String Session 
+![[Run on Repl.it](https://repl.it/badge/github/ChankitSaini/GenerateStringSession)](https://replit.com/@ChankitSaini/GenerateStringSession)
+
+
 
 ## Our Telegram Channel and Group
 
