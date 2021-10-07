@@ -1,4 +1,5 @@
-import os
+import os 
+import io 
 import re
 import requests
 import urllib
