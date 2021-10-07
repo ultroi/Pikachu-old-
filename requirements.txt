@@ -1,7 +1,8 @@
 future
 emoji
 lxml
-beautifulsoup4
+beautifulsoup4 
+bing_image_downloader
 requests
 sqlalchemy==1.3.20
 python-telegram-bot==12.8
