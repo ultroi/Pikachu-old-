@@ -3,7 +3,7 @@ import re
 import os
 import html
 import requests
-import GabiBraunRobot.modules.sql.kuki_sql as sql
+import GabiBraunRobot.modules.sql.Chatbot_sql as sql
 
 from time import sleep
 from telegram import ParseMode
