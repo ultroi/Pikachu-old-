@@ -3,7 +3,7 @@ import re
 import os
 import html
 import requests
-import Cutiepii_Robot.modules.sql.kuki_sql as sql
+import GabiBraunRobot.modules.sql.kuki_sql as sql
 
 from time import sleep
 from telegram import ParseMode
@@ -15,10 +15,10 @@ from telegram.ext import (CallbackContext, CallbackQueryHandler, CommandHandler,
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
-from Cutiepii_Robot.modules.helper_funcs.filters import CustomFilters
-from Cutiepii_Robot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
-from Cutiepii_Robot import dispatcher, updater, SUPPORT_CHAT
-from Cutiepii_Robot.modules.log_channel import gloggable
+from GabiBraunRobot.modules.helper_funcs.filters import CustomFilters
+from GabiBraunRobot.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
+from GabiBraunRobot import dispatcher, updater, SUPPORT_CHAT
+from GabiBraunRobot.modules.log_channel import gloggable
 
 @run_async
 @user_admin_no_reply
