@@ -160,7 +160,7 @@
          "value": "True"
       },
       "AI_API_KEY": {
-      "description": "Make your bot talk using Intellivoid's chatbot API, get your key from https://coffeehouse.intellivoid.net/",
+      "description": "Make your bot talk using kuki's chatbot API, get your key from @KukiChatBot and give cmd /token ",
          "required": false,
          "value": ""
    },      
