@@ -1,5 +1,5 @@
 # We're using Debian Slim Buster image
-FROM python:3.8.5-slim-buster
+FROM python:3.9.7-slim-buster
 
 ENV PIP_NO_CACHE_DIR 1
 
@@ -65,7 +65,7 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/GabiBraunRobot
-RUN git clone -b shiken https://github.com/HuntingBots/GabiBraunRobot /root/GabiBraunRobot
+RUN git clone -b shiken https://github.com/ultroi/PikachuRobot /root/GabiBraunRobot
 WORKDIR /root/GabiBraunRobot
 
 #Copy config file to /root/GabiBraunRobot/GabiBraunRobot
