@@ -1,6 +1,6 @@
-__mod_name__ = "Tools"
-__help__ = """
 
+
+__help__ = "Tools"
 • Snipe 
 ──「 Sudo only: 」──
 -> /snipe <chatid> <string>
@@ -29,4 +29,5 @@ Example: \?.
 
 Report bugs - @PikachuHelpSupport
 """
+__mod_name__ = "Tools"
 
