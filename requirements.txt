@@ -98,6 +98,6 @@ fuzzysearch
 apscheduler
 flag
 pybase64  
-decodestring 
+
 pySmartDL 
 validators 
