@@ -97,6 +97,7 @@ nhentai
 fuzzysearch
 apscheduler
 flag
-pybase64 
+pybase64  
+prase 
 pySmartDL 
 validators 
