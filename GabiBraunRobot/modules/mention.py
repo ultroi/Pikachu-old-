@@ -14,7 +14,7 @@ from GabiBraunRobot.events import register as GabiBraunRobot
 
 
 
-@asuna(pattern="^/all ?(.*)")
+@GabiBraunRobot(pattern="^/all ?(.*)")
 async def mentionall(event):
     if event.is_private:
         return await event.respond(
