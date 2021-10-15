@@ -12,15 +12,6 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from GabiBraunRobot.events import register as GabiBraunRobot
 
 
-logging.basicConfig(
-    level=logging.INFO, format="%(name)s - [%(levelname)s] - %(message)s"
-)
-LOGGER = logging.getLogger(__name__)
-
-api_id = int(os.environ.get("APP_ID"))
-api_hash = os.environ.get("API_HASH")
-bot_token = os.environ.get("TOKEN")
-client = TelegramClient("client", api_id, api_hash).start(bot_token=bot_token)
 
 
 @asuna(pattern="^/all ?(.*)")
