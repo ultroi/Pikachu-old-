@@ -28,5 +28,5 @@ If you want to use these characters, make sure you escape them!
 Example: \?.
 
 Report bugs - @PikachuHelpSupport
-
 """
+
