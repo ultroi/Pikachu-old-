@@ -97,3 +97,5 @@ nhentai
 fuzzysearch
 apscheduler
 flag
+pybase64
+pySmartDL
