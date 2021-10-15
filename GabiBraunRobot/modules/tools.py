@@ -18,10 +18,7 @@ Example:
  - /tm: Get Telegraph Link of Replied Media
  - /txt: Get Telegraph Link of Replied Text
 
-• Text to speech 
-
- - /tts <text>: convert text to speech
-
+ 
 • Time
 
  • /time <query>: Gives information about a timezone.
