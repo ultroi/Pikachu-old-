@@ -1,5 +1,5 @@
 __mod_name__ = "Tools"
-__help__ =  """"
+__help__ = """"
 
 • Snipe 
 ──「 Sudo only: 」──
