@@ -50,3 +50,4 @@ cloudscraper
 telegraph
 selenium 
 cowpy
+search_engine_parser==0.6.6
