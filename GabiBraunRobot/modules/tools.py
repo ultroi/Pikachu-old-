@@ -1,6 +1,6 @@
 
 
-__help__ = "Tools"
+__help__ = """
 • Snipe 
 ──「 Sudo only: 」──
 -> /snipe <chatid> <string>
