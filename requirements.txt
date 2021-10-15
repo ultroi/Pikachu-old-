@@ -98,7 +98,8 @@ fuzzysearch
 apscheduler
 flag
 pybase64  
-parse
+feedparser
+
 pySmartDL 
 validators 
 base64
