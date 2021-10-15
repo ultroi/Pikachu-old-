@@ -22,7 +22,8 @@ jikanpy
 speedtest-cli
 coffeehouse
 cachetools
-google_trans_new
+google_trans_new 
+bing_image_downloader
 regex
 redis 
 telegraph 
