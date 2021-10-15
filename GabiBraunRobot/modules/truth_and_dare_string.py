@@ -20,7 +20,8 @@ TRUTH = (
 )
 
 DARE = (
-    "Show the most embarrassing photo on your phone"
+    "Show the most embarrassing photo on your phone" 
+    "Say, ' I love You ' to your gf/bf",
     "Show the last five people you texted and what the messages said",
     "Let the rest of the group DM someone from your Instagram account",
     "Eat a raw piece of garlic",
