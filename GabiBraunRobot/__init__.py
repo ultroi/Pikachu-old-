@@ -8,6 +8,7 @@ import telegram.ext as tg
 from redis import StrictRedis
 from telethon import TelegramClient
 from pyrogram import Client, errors
+from telethon.sessions import MemorySession
 
 StartTime = time.time()
 
@@ -197,7 +198,7 @@ else:
     sw = spamwatch.Client(SPAMWATCH_API)
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
-telethn = TelegramClient("saitama", API_ID, API_HASH)
+telethn = TelegramClient(MemorySession(), API_ID, API_HASH)
 pgram = Client("SenseiPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
 
