@@ -37,7 +37,7 @@ from GabiBraunRobot.modules.sql import SESSION
 import GabiBraunRobot.modules.sql.userinfo_sql as sql
 from GabiBraunRobot.modules.disable import DisableAbleCommandHandler
 from GabiBraunRobot.modules.sql.global_bans_sql import is_user_gbanned
-from GabiBraunRobot.modules.redis.afk_redis import is_user_afk, afk_reason
+from GabiBraunRobot.modules.sql.afk_redis import is_user_afk, afk_reason
 from GabiBraunRobot.modules.sql.users_sql import get_user_num_chats
 from GabiBraunRobot.modules.helper_funcs.chat_status import sudo_plus
 from GabiBraunRobot.modules.helper_funcs.extraction import extract_user
