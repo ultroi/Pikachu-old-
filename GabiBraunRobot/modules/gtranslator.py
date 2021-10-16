@@ -1,12 +1,13 @@
 from gpytranslate import SyncTranslator
 from telegram import ParseMode, Update
-from telegram.ext import CallbackContext
+from telegram.ext import CallbackContext, run_async
 
 from GabiBraunRobot import dispatcher
 from GabiBraunRobot.modules.disable import DisableAbleCommandHandler
 
 trans = SyncTranslator()
 
+@run_async
 def translate(update: Update, context: CallbackContext) -> None:
     bot = context.bot
     message = update.effective_message
@@ -36,7 +37,7 @@ def translate(update: Update, context: CallbackContext) -> None:
 
     bot.send_message(text=reply, chat_id=message.chat.id, parse_mode=ParseMode.HTML)
 
-
+@run_async
 def languages(update: Update, context: CallbackContext) -> None:
     message = update.effective_message
     bot = context.bot
@@ -46,6 +47,7 @@ def languages(update: Update, context: CallbackContext) -> None:
 
 __help__ = """ 
 Use this module to translate stuff!
+
 *Commands:*
    ➢ `/tl` (or `/tr`): as a reply to a message, translates it to English.
    ➢ `/tl <lang>`: translates to <lang>
@@ -55,24 +57,11 @@ eg: `/tl ja//en`: translates from Japanese to English.
 • [List of supported languages for translation](https://telegra.ph/Lang-Codes-03-19-3)
 """
 
-TRANSLATE_HANDLER = DisableAbleCommandHandler(["tr", "tl"], translate, run_async=True)
-TRANSLATE_LANG_HANDLER = DisableAbleCommandHandler(["lang", "languages"], languages, run_async=True)
+TRANSLATE_HANDLER = DisableAbleCommandHandler(["tr", "tl"], translate)
+TRANSLATE_LANG_HANDLER = DisableAbleCommandHandler(["lang", "languages"], languages)
 
 dispatcher.add_handler(TRANSLATE_HANDLER)
 dispatcher.add_handler(TRANSLATE_LANG_HANDLER)
 
 __mod_name__ = "Translator"
 __command_list__ = ["tr", "tl", "lang", "languages"]
-__handlers__ = [TRANSLATE_HANDLER, TRANSLATE_LANG_HANDLER]
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
