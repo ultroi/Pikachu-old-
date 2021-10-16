@@ -2,31 +2,46 @@ import html
 import re
 import os
 import requests
-import subprocess
+import time
+import datetime
+import platform
 
+from psutil import cpu_percent, virtual_memory, disk_usage, boot_time
+from platform import python_version
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import events
 
-from telegram import MAX_MESSAGE_LENGTH, ParseMode, Update
+from telegram import MAX_MESSAGE_LENGTH, ParseMode, Update, MessageEntity, __version__ as ptbver, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CallbackContext, CommandHandler
 from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
 
-from GabiBraunRobot import (DEV_USERS, OWNER_ID, DRAGONS, DEMONS, TIGERS, WOLVES,
-                          INFOPIC, dispatcher, sw)
+from GabiBraunRobot import (
+    DEV_USERS,
+    OWNER_ID,
+    DRAGONS,
+    DEMONS,
+    TIGERS,
+    WOLVES,
+    INFOPIC,
+    dispatcher,
+    sw,
+    StartTime,
+    SUPPORT_CHAT,
+    REDIS,
+)
 from GabiBraunRobot.__main__ import STATS, TOKEN, USER_INFO
+from GabiBraunRobot.modules.sql import SESSION
 import GabiBraunRobot.modules.sql.userinfo_sql as sql
 from GabiBraunRobot.modules.disable import DisableAbleCommandHandler
 from GabiBraunRobot.modules.sql.global_bans_sql import is_user_gbanned
-from GabiBraunRobot.modules.sql.afk_redis import is_user_afk, afk_reason
+from GabiBraunRobot.modules.redis.afk_redis import is_user_afk, afk_reason
 from GabiBraunRobot.modules.sql.users_sql import get_user_num_chats
-from GabiBraunRobot.modules.sql.feds_sql import get_user_fbanlist
 from GabiBraunRobot.modules.helper_funcs.chat_status import sudo_plus
 from GabiBraunRobot.modules.helper_funcs.extraction import extract_user
-from GabiBraunRobot import telethn as SaitamaTelethonClient, TIGERS, DRAGONS, DEMONS
-
+from GabiBraunRobot import telethn as Yui, TIGERS, DRAGONS, DEMONS
 
 def no_by_per(totalhp, percentage):
     """
@@ -47,6 +62,29 @@ def get_percentage(totalhp, earnedhp):
     per_of_totalhp = str(int(per_of_totalhp))
     return per_of_totalhp
 
+def get_readable_time(seconds: int) -> str:
+    count = 0
+    ping_time = ""
+    time_list = []
+    time_suffix_list = ["s", "m", "h", "days"]
+
+    while count < 4:
+        count += 1
+        remainder, result = divmod(seconds, 60) if count < 3 else divmod(seconds, 24)
+        if seconds == 0 and remainder == 0:
+            break
+        time_list.append(int(result))
+        seconds = int(remainder)
+
+    for x in range(len(time_list)):
+        time_list[x] = str(time_list[x]) + time_suffix_list[x]
+    if len(time_list) == 4:
+        ping_time += time_list.pop() + ", "
+
+    time_list.reverse()
+    ping_time += ":".join(time_list)
+
+    return ping_time
 
 def hpmanager(user):
     total_hp = (get_user_num_chats(user.id) + 10) * 10
@@ -152,7 +190,7 @@ def get_id(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.HTML)
 
 
-@SaitamaTelethonClient.on(
+@Pikachu.on(
     events.NewMessage(
         pattern='/ginfo ',
         from_users=(TIGERS or []) + (DRAGONS or []) + (DEMONS or [])))
@@ -401,15 +439,50 @@ def set_about_me(update: Update, context: CallbackContext):
 
 @run_async
 @sudo_plus
-def stats(update: Update, context: CallbackContext):
-    process = subprocess.Popen(
-        "neofetch --stdout", shell=True, text=True, stdout=subprocess.PIPE)
-    output = process.communicate()[0]
-    stats = "<b>Current stats:</b>\n" + "\n" + output + "\n".join(
-        [mod.__stats__() for mod in STATS])
-    result = re.sub(r'(\d+)', r'<code>\1</code>', stats)
-    update.effective_message.reply_text(result, parse_mode=ParseMode.HTML)
-
+def stats(update, context):
+    uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
+    botuptime = get_readable_time((time.time() - StartTime))
+    status = "*╒═══「 System Statistics 」*\n\n"
+    status += "*• System Start time:* " + str(uptime) + "\n"
+    uname = platform.uname()
+    status += "*• System:* " + str(uname.system) + "\n"
+    status += "*• Node name:* " + escape_markdown(str(uname.node)) + "\n"
+    status += "*• Release:* " + escape_markdown(str(uname.release)) + "\n"
+    status += "*• Machine:* " + escape_markdown(str(uname.machine)) + "\n"
+    mem = virtual_memory()
+    cpu = cpu_percent()
+    disk = disk_usage("/")
+    status += "*• CPU:* " + str(cpu) + " %\n"
+    status += "*• RAM:* " + str(mem[2]) + " %\n"
+    status += "*• Storage:* " + str(disk[3]) + " %\n\n"
+    status += "*• Python Version:* " + python_version() + "\n"
+    status += "*• Python-Telegram-Bot:* " + str(ptbver) + "\n"
+    status += "*• Uptime:* " + str(botuptime) + "\n"
+    try:
+        update.effective_message.reply_text(
+            status
+            + "\n*Bot Statistics*:\n"
+            + "\n".join([mod.__stats__() for mod in STATS])
+            + "\n\n✦ [Support](https://t.me/PikachuHelpSupport) | ✦ [Updates](https://t.me/PikachuUpdate)\n\n"
+            + "╘══「 Powered By [PikachuRobot](https://t.me/PikachuRobo_bot) 」\n",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+        )
+    except BaseException:
+        update.effective_message.reply_text(
+            (
+                (
+                    (
+                        "\n*Bot Statistics*:\n"
+                        + "\n".join(mod.__stats__() for mod in STATS)
+                    )
+                    + "\n\n✦ [Support](https://t.me/PikachuHelpSupport) | ✦ [Updates](https://t.me/PikachuUpdate)\n\n"
+                )
+                + "╘══「 Powered By [PikachuRobot](https://t.me/PikachuRobo_bot) 」\n"
+            ),
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+        )
 
 @run_async
 def about_bio(update: Update, context: CallbackContext):
@@ -493,6 +566,8 @@ def __user_info__(user_id):
     result = result.strip("\n")
     return result
 
+def __stats__():
+    return f"• {len(REDIS.keys())} Total Keys in Redis Database."
 
 __help__ = """
 *ID:*
