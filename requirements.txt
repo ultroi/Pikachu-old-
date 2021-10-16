@@ -9,7 +9,8 @@ pyrogram
 psycopg2-binary
 feedparser
 pynewtonmath
-spongemock
+spongemock 
+secureme
 zalgo-text
 geopy
 nltk
