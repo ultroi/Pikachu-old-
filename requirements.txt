@@ -23,7 +23,8 @@ speedtest-cli
 coffeehouse
 cachetools
 google_trans_new 
-bing_image_downloader
+bing_image_downloader 
+gpytranslate==1.3.0 
 regex
 redis 
 telegraph 
