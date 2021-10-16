@@ -41,7 +41,7 @@ from GabiBraunRobot.modules.sql.afk_redis import is_user_afk, afk_reason
 from GabiBraunRobot.modules.sql.users_sql import get_user_num_chats
 from GabiBraunRobot.modules.helper_funcs.chat_status import sudo_plus
 from GabiBraunRobot.modules.helper_funcs.extraction import extract_user
-from GabiBraunRobot import telethn as Yui, TIGERS, DRAGONS, DEMONS
+from GabiBraunRobot import telethn as Pikachu, TIGERS, DRAGONS, DEMONS
 
 def no_by_per(totalhp, percentage):
     """
