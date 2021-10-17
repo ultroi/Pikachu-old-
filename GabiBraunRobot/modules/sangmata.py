@@ -28,7 +28,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl import functions, types
 
 from GabiBraunRobot.events import register as Cutiepii
-from GabiBraunRobot import telethn, ubot
+from GabiBraunRobot import telethn, pgram
 
 
 async def is_register_admin(chat, user):
@@ -98,7 +98,7 @@ async def _(event):
 
     lol = await event.reply("```Processing```")
 
-    async with ubot.conversation(chat) as conv:
+    async with pgram.conversation(chat) as conv:
 
         try:
 
