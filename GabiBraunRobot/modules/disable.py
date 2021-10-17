@@ -346,7 +346,7 @@ if is_module_loaded(FILENAME):
 Support : *@PikachuHelpSupport*
     """
 
-    __mod_name__ = "Command disabling"
+    __mod_name__ = "Disable"
 
 else:
     DisableAbleCommandHandler = CommandHandler
