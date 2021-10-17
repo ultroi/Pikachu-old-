@@ -40,7 +40,7 @@ def kukirm(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "Yuzuki Chatbot disable by {}.".format(mention_html(user.id, user.first_name)),
+                "Pikachu Chatbot disable by {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML,
             )
 
@@ -66,7 +66,7 @@ def kukiadd(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "Yuzuki Chatbot enable by {}.".format(mention_html(user.id, user.first_name)),
+                "Pikachu Chatbot enable by {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML,
             )
 
@@ -95,7 +95,7 @@ def kuki(update: Update, context: CallbackContext):
 
 def kuki_message(context: CallbackContext, message):
     reply_message = message.reply_to_message
-    if message.text.lower() == "Yuzuki":
+    if message.text.lower() == "Pikachu":
         return True
     if reply_message:
         if reply_message.from_user.id == context.bot.get_me().id:
