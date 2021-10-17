@@ -204,6 +204,7 @@ telethn = TelegramClient(MemorySession(), API_ID, API_HASH)
 pgram = Client("SenseiPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
 aiohttpsession = ClientSession()
+pbot = Client("Pikachu", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
