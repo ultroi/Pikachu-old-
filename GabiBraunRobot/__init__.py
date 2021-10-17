@@ -9,6 +9,7 @@ from redis import StrictRedis
 from telethon import TelegramClient
 from pyrogram import Client, errors
 from telethon.sessions import MemorySession
+from aiohttp import ClientSession
 
 StartTime = time.time()
 
@@ -202,6 +203,7 @@ updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient(MemorySession(), API_ID, API_HASH)
 pgram = Client("SenseiPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
+aiohttpsession = ClientSession()
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
