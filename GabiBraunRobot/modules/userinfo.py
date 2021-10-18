@@ -570,6 +570,11 @@ def __stats__():
     return f"• {len(REDIS.keys())} Total Keys in Redis Database."
 
 __help__ = """
+*Afk*
+• /afk <reason>: Mark yourself as AFK.
+• brb <reason>: Same as the afk command, but not a command.\n
+    When marked as AFK, any mentions will be replied to with a message stating that you're not available
+
 *ID:*
  • `/id`*:* get the current group id. If used by replying to a message, gets that user's id.
  • `/gifid`*:* reply to a gif to me to tell you its file ID.
@@ -612,7 +617,7 @@ dispatcher.add_handler(GET_BIO_HANDLER)
 dispatcher.add_handler(SET_ABOUT_HANDLER)
 dispatcher.add_handler(GET_ABOUT_HANDLER)
 
-__mod_name__ = "Info"
+__mod_name__ = "Info & Afk"
 __command_list__ = ["setbio", "bio", "setme", "me", "info"]
 __handlers__ = [
     ID_HANDLER, GIFID_HANDLER, INFO_HANDLER, SET_BIO_HANDLER, GET_BIO_HANDLER,
