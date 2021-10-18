@@ -20,11 +20,19 @@ __help__ = """
  ❍ /zip*:* reply to a telegram file to compress it in .zip format
  ❍ /unzip*:* reply to a telegram file to decompress it from the .zip format
 
-* Translate*
+*Translator*
  ❍ /tr <languange code>*:* Translate the text
 Example: 
  ❍ /tr en*:* For translate to english 
+ 
+* Snipe* 
+-> /snipe <chatid> <string>
+Make me send a message to a specific chat.
 
-Error report to @PikachuHelpSupport
+Report on Error @PikachuHelpSupport
 """
+
+
+
+
 
