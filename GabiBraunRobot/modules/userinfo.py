@@ -319,17 +319,17 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nThe Disaster level of this person is 'Professor'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is 'Campion'."
+        text += "\n\nThe Disaster level of this person is 'Champion'."
         disaster_level_present = True
     elif user.id in TIGERS:
         text += "\n\nThe Disaster level of this person is 'Trainer'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Disaster level of this person is 'Beginer'."
+        text += "\n\nThe Disaster level of this person is 'Beginner'."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/PikachuUpdate/3">?</a>]'.format(
+        text += ' [<a href="https://t.me/PikachuUpdate/44">?</a>]'.format(
             bot.username)
 
     try:
