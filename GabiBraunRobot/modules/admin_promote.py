@@ -106,4 +106,4 @@ dispatcher.add_handler(PROMOTE_HANDLER)
 
 __handlers__ = [
     ADMIN_PROMOTE_HANDLER
-]
+] 
