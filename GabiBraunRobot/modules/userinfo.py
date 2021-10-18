@@ -310,26 +310,26 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThe Disaster level of this person is 'God'."
+        text += "\n\nThe Disaster level of this person is 'Master'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is Gabi's 'Frined'."
+        text += "\n\nThis user is Gabi's 'Legend'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThe Disaster level of this person is 'Dragon'."
+        text += "\n\nThe Disaster level of this person is 'Professor'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is 'Demon'."
+        text += "\n\nThe Disaster level of this person is 'Campion'."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThe Disaster level of this person is 'Tiger'."
+        text += "\n\nThe Disaster level of this person is 'Trainer'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Disaster level of this person is 'Wolf'."
+        text += "\n\nThe Disaster level of this person is 'Beginer'."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/EldianGabi_UpdateChannel/3">?</a>]'.format(
+        text += ' [<a href="https://t.me/PikachuUpdate/3">?</a>]'.format(
             bot.username)
 
     try:
