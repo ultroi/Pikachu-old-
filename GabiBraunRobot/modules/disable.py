@@ -161,7 +161,7 @@ if is_module_loaded(FILENAME):
         args = context.args
         chat = update.effective_chat
         if len(args) >= 1:
-            disable_module = "SungJinwooRobot.modules." + args[0].rsplit(".", 1)[0]
+            disable_module = "GabiBraunRobot.modules." + args[0].rsplit(".", 1)[0]
 
             try:
                 module = importlib.import_module(disable_module)
@@ -234,7 +234,7 @@ if is_module_loaded(FILENAME):
         chat = update.effective_chat
 
         if len(args) >= 1:
-            enable_module = "SungJinwooRobot.modules." + args[0].rsplit(".", 1)[0]
+            enable_module = "GabiBraunRobot.modules." + args[0].rsplit(".", 1)[0]
 
             try:
                 module = importlib.import_module(enable_module)
