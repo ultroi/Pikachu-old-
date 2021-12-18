@@ -9,7 +9,7 @@ geopy
 googletrans==4.0.0-rc1
 humanize
 jikanpy
-lxml==4.6.3
+lxml==4.6.5
 nltk==3.6.5
 pillow>=8.3.2
 pretty_errors==1.2.17
